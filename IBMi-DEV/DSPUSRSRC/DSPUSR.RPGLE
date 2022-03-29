@@ -21,7 +21,7 @@
 000120220328           phoneNumberType CHAR(10);
 000121220328           address likeds(addressDS);
 000122220328          END-DS;
-000123220328         dcl-proc dspproc1;
+000123220329         dcl-proc dspproc1;
 000124220328         DCL-PI dspproc1 EXTPGM('DSPUSRINFO');
 000125220328           input CHAR(20) const;
 000126220328           userInfo likeds(userRecord);
