@@ -1,0 +1,23 @@
+{
+  "name": "rpgdev",
+  "version": "1.0.0",
+  "description": "",
+  "main": "myapp.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bmarolleau/rpgdev.git.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bmarolleau/rpgdev.git/issues"
+  },
+  "homepage": "https://github.com/bmarolleau/rpgdev.git#readme",
+  "dependencies": {
+    "idb-connector": "^1.2.5",
+    "itoolkit": "^1.0.0-alpha.1"
+  }
+}

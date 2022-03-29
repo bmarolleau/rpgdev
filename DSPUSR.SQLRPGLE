@@ -11,7 +11,8 @@
                stateProvince CHAR(20);
                country CHAR(20);
                postalCode CHAR(10); 
-          END-DS; 
+          END-DS;  
+          
           Dcl-Ds userRecord qualified;
            username CHAR(20);
            status CHAR(20)  ;

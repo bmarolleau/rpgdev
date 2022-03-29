@@ -1,0 +1,29 @@
+<pcml version="6.0">
+   <!-- RPG program: GETUSRINFO  -->
+   <!-- created: 2021-04-19-10.25.13 -->
+   <!-- source: /HOME/BENOIT/RPG/rpgdev/DSPUSR.SQLRPGLE -->
+   <!-- 7 -->
+   <struct name="addressDS">
+      <data name="streetAddress1" type="char" length="20" usage="inherit" />
+      <data name="streetAddress2" type="char" length="20" usage="inherit" />
+      <data name="city" type="char" length="20" usage="inherit" />
+      <data name="stateProvince" type="char" length="20" usage="inherit" />
+      <data name="country" type="char" length="20" usage="inherit" />
+      <data name="postalCode" type="char" length="10" usage="inherit" />
+   </struct>
+   <!-- 16 -->
+   <struct name="userRecord">
+      <data name="username" type="char" length="20" usage="inherit" />
+      <data name="status" type="char" length="20" usage="inherit" />
+      <data name="total_miles" type="int" length="4" precision="31" usage="inherit" />
+      <data name="miles_ytd" type="int" length="4" precision="31" usage="inherit" />
+      <data name="phoneNumber" type="char" length="15" usage="inherit" />
+      <data name="phoneNumberType" type="char" length="10" usage="inherit" />
+      <data name="address" type="struct" struct="addressDS" usage="inherit" />
+   </struct>
+   <!-- 39 -->
+   <program name="dspproc1">
+      <data name="input" type="char" length="20" usage="input" />
+      <data name="userInfo" type="struct" struct="userRecord" usage="inputoutput" />
+   </program>
+</pcml>
