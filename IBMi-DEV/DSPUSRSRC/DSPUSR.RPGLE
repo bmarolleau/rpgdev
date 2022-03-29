@@ -26,13 +26,10 @@
 000125220328           input CHAR(20) const;
 000126220328           userInfo likeds(userRecord);
 000127220328         END-PI;
-000128220328
 000129220328           //ID=input;
 000130220328         if %parms() = 1;
-000131220328
 000132220328             return;
 000133220328         ENDIF;
-000134220328
 000135220328         dsply ('input: ' + input);
 000136220328         Chain input CUSTOMER;
 000137220328         If %Found(CUSTOMER);
