@@ -26,7 +26,7 @@
 000125220328           input CHAR(20) const;
 000126220328           userInfo likeds(userRecord);
 000127220328         END-PI;
-000129220328           //ID=input;
+000129220329           //ID=input;
 000130220328         if %parms() = 1;
 000132220328             return;
 000133220328         ENDIF;
