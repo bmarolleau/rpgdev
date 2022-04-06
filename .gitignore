@@ -3,3 +3,6 @@ RemoteSystemsTempFiles
 .vscode
 .metadata
 core
+buildTAI/target
+.DS_Store
+buildTAI/pom_localjars.xml.BACKUP.xml

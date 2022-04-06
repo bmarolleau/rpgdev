@@ -29,7 +29,7 @@ public class SimpleTAI implements TrustAssociationInterceptor
    {
         // Add logic to authenticate a request and return a TAI result.
         String tai_user = "taiUser";
-        System.out.println("authenticated√");
+        System.out.println("authenticated");
         return TAIResult.create(HttpServletResponse.SC_OK, tai_user);
    }
 
