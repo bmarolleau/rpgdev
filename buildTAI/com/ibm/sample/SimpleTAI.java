@@ -57,12 +57,12 @@ jwtConsumer = JwtConsumer.create("myJWTConsumer");
 JwtToken jwtTokenConsumer = jwtConsumer.createJwt(jwtTokenString);
 Claims jwtClaims = jwtTokenConsumer.getClaims();
 // Uncomment to print the JWT claims in messages.log
-/*
+/* 
 System.out.println("[JWTTAI] Decoded JWT token is as follows: ");
 for(Entry<String, Object> e : jwtClaims.entrySet()) {
      System.out.println("[JWTTAI] " + e.getKey()+" :: "+e.getValue());
-}
-*/
+} */
+
 tai_user = jwtClaims.getSubject();
 System.out.println("[JWTTAI] TAI USER = " + tai_user);
 } catch (InvalidConsumerException e) {
@@ -74,7 +74,7 @@ return TAIResult.create(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
 System.err.println("[JWTTAI] " + e.getMessage());
 return TAIResult.create(HttpServletResponse.SC_UNAUTHORIZED);
 }
-
+ 
 return TAIResult.create(HttpServletResponse.SC_OK, tai_user);
 }
 
