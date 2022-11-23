@@ -7,3 +7,8 @@ buildTAI/target
 .DS_Store
 buildTAI/pom_localjars.xml.BACKUP.xml
 buildTAI/lib
+.logs
+.evfevent
+.theia
+.logs
+.fevents
