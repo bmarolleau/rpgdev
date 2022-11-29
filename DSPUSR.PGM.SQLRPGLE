@@ -15,11 +15,11 @@
             endif;
             dsply ('input: ' + input);
         
-            Exec SQL SELECT * 
-            INTO :userInfo 
-            FROM   CUSTOMER
-            WHERE ID = :input;
-            userInfo.CITY+=' RPG!!';
-            dsply ('found: ' + userInfo.ID);
+             Exec SQL SELECT *    
+             INTO :userInfo 
+             FROM   CUSTOMER
+             WHERE ID = :input;
+             userInfo.CITY+=' RPG!!';
+             dsply ('found: ' + userInfo.ID);
             return;
          end-proc GetCustInf; 
