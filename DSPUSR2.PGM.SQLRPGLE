@@ -21,5 +21,6 @@
              WHERE ID = :input;
              userInfo.CITY+=' RPG!!';
              dsply ('found: ' + userInfo.ID);
+             
             return;
          end-proc GetCustInf; 

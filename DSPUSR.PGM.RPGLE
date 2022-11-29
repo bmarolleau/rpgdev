@@ -23,7 +23,7 @@
            address likeds(addressDS);
           END-DS;
          dcl-proc dspproc1;
-         DCL-PI dspproc1 EXTPGM('DSPUSR2');
+         DCL-PI dspproc1 EXTPGM('DSPUSR');
            input CHAR(20) const;
            userInfo likeds(userRecord);
          END-PI;
