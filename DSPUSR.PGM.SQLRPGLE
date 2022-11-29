@@ -1,5 +1,5 @@
      H PGMINFO(*PCML:*DCLCASE:*MODULE)
-          ctl-opt main(GetCustInf);
+          ctl-opt main(GetCustInf) dftactgrp(*no);
 
           dcl-ds userRecord extname('CUSTOMER') qualified ;
           end-ds;

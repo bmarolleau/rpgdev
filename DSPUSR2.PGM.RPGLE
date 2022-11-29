@@ -56,7 +56,7 @@
          else;
            return;
          ENDIF;
-
+          close CUSTOMER;
 
           return;
          end-proc dspproc1; 
