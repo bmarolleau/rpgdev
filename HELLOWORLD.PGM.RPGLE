@@ -1,6 +1,13 @@
 **FREE
         //H PGMINFO(*PCML:*DCLCASE:*MODULE)
 
+
+       /if defined(*CRTBNDRPG)
+         ctl-opt dftactgrp(*no)
+                 actgrp(*new);
+       /endif
+       ctl-opt option(*srcstmt);
+
     Dcl-S Text varchar(20);
     dcl-s CHAR Char(10);
     dcl-ds info qualified;
@@ -21,6 +28,18 @@
        dcl-s numFamilies uns(5) inz(0);
        dcl-s i int(10);
        dcl-s j int(10);
+
+      dcl-pr qcmdexc extpgm('QCMDEXC');
+          theCmd char(3000) const;
+          cmdLen packed(15 : 5) const;
+          dbcs char(3) const options(*nopass);
+       end-pr;
+       dcl-s cmd varchar(100);
+
+      dcl-s num int(10) inz(25);
+
+             dcl-f rpgtestf;
+
 
     CHAR=' in RPG!';
     Text = 'Hello world'+CHAR;
@@ -74,7 +93,37 @@
                + ' years old.');
           endfor;
        endfor;
-       return;
+       
+      cmd = 'DSPJOB OUTPUT(*PRINT)';
+       qcmdexc (cmd : %len(cmd));
+       qcmdexc ('WRKSPLF' : 7);
     
+
+       print ('This message is much longer than the 52 '
+            + 'characters that DSPLY allows. '
+            + 'The value of variable "num" is ' + %char(num));
+      
+
     *InLR = *On;
+
+   
+       read rpgtestf;
+       dow not %eof;
+          dsply ODOBNM;
+          read rpgtestf;
+       enddo;
+
     Return;     
+
+      dcl-proc print;
+          dcl-pi  *n;
+             msg varchar(5000) const;
+          end-pi;
+          dcl-pr printf extproc(*dclcase);
+             template pointer value options(*string);
+             dummy int(10) value options(*nopass);
+          end-pr;
+          dcl-c NEWLINE x'15';
+
+          printf(msg + NEWLINE);
+          end-proc print;
