@@ -5,7 +5,7 @@
   "curlib": "&lib1",
   "includePath": ["includes", "IBMi-DEV"],
   "preUsrlibl": ["&lib1"],
-  "postUsrlibl": [],
+  "postUsrlibl": ["RPGDEV"],
   "setIBMiEnvCmd": [],
   "repository": "https://github.com/bmarolleau/rpgdev"
 }

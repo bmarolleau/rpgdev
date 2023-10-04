@@ -38,7 +38,7 @@
 
       dcl-s num int(10) inz(25);
 
-             dcl-f rpgtestf;
+            // dcl-f rpgtestf;
 
 
     CHAR=' in RPG!';
@@ -107,11 +107,11 @@
     *InLR = *On;
 
    
-       read rpgtestf;
-       dow not %eof;
-          dsply ODOBNM;
-          read rpgtestf;
-       enddo;
+    // read rpgtestf;
+    //   dow not %eof;
+    //       dsply ODOBNM;
+    //       read rpgtestf;
+    //   enddo;
 
     Return;     
 
