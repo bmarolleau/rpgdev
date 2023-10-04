@@ -1,5 +1,5 @@
      H PGMINFO(*PCML:*DCLCASE:*MODULE)
-          ctl-opt main(GetCustInf) dftactgrp(*no);
+          ctl-opt main(GetCustInf);
 
           dcl-ds userInfo0 extname('CUSTOMER') qualified ;
           end-ds;
@@ -13,7 +13,7 @@
           END-DS;  
           
           Dcl-Ds userRecord qualified;
-           username VARCHAR(20);
+           username CHAR(20);
            status CHAR(20)  ;
            total_miles INT(10);
            miles_ytd  INT(10); 
@@ -23,8 +23,8 @@
           END-DS;
 
          dcl-proc GetCustInf;
-            DCL-PI *n EXTPGM('DSPUSR4');
-              input VARCHAR(20) const;
+            DCL-PI *n EXTPGM('WS3DTAS');
+              input CHAR(20) const;
               userInfo likeds(userRecord);
             END-PI;
            //ID=input;

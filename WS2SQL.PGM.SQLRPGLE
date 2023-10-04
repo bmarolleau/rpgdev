@@ -5,7 +5,7 @@
           end-ds;
          
          dcl-proc GetCustInf;
-            DCL-PI *n EXTPGM('DSPUSR');
+            DCL-PI *n EXTPGM('WS2SQL');
               input CHAR(20) const;
               userInfo likeds(userRecord);
             END-PI;
