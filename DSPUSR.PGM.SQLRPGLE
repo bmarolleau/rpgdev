@@ -44,7 +44,7 @@
             userInfo.miles_ytd=userInfo0.MILES_YTD;
             userInfo.phoneNumber=userInfo0.PHONE00001;
             userInfo.phoneNumberType=userInfo0.PHONE00002;
-            userInfo.address.streetAddress1=userInfo0.STREE00001+'V3!!!';
+            userInfo.address.streetAddress1=userInfo0.STREE00001+'V2.O!!!';
             userInfo.address.streetAddress2=userInfo0.STREE00002;
             userInfo.address.city=userInfo0.CITY;
             userInfo.address.stateProvince=userInfo0.STATE00001;
